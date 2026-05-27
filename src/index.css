@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light, dark;
+  /* ប្រាប់ឱ្យវាស្គាល់ទាំង light និង dark */
+}
+
+/* បង្ខំឱ្យប្រើ light theme ជា default ទោះ system ជា dark mode ក៏ដោយ */
+:root {
+  color-scheme: light;
+}
+
+
+body {
+    font-family: "Syne";
+}
+
+@theme {
+    --color-muted: #8a92a8;
+    --color-accent: #00e5a0;
+    --color-bg2: #141820;
+    --color-bg3: #1c2230;
+}
+
+@layer components {
+    .btn-primary{
+        @apply px-3.5 py-1.5 bg-accent text-black transition-all rounded cursor-pointer hover:translate-y-0.5;
+    }
+    .btn-outline{
+        @apply px-3.5 py-1.5 border border-gray-500 text-black transition-all rounded cursor-pointer hover:translate-y-0.5;
+    }
+}
